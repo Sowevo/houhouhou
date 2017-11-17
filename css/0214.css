@@ -1,0 +1,236 @@
+
+@charset "utf-8";
+	*,html,li,ol,ul {
+	margin:0;
+	padding:0
+}
+
+
+html {
+	overflow-x:hidden
+}
+
+
+
+
+.heart-vt,.heartgroup-vt {
+	width:1200px;
+	top:0;
+	margin-left:-600px;
+	overflow:hidden
+}
+.heartgroup-vt span {
+	display:block;
+	position:absolute;
+	-webkit-animation-duration:1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate
+}
+.heart-vt {
+	z-index:103
+}
+
+.heartgroup-vt .item1-gvt {
+	width:25px;
+	height:13px;
+	top:144px;
+	left:294px;
+	animation-delay:0s
+}
+.heartgroup-vt .item2-gvt {
+	width:64px;
+	height:42px;
+	top:86px;
+	left:456px;
+	animation-delay:.5s
+}
+.heartgroup-vt .item3-gvt {
+	width:56px;
+	height:36px;
+	top:68px;
+	left:790px;
+	animation-delay:.8s
+}
+.heartgroup-vt .item4-gvt {
+	width:25px;
+	height:13px;
+	top:100px;
+	left:900px;
+	animation-delay:0s
+}
+.heartgroup-vt .item5-gvt {
+	width:64px;
+	height:42px;
+	top:140px;
+	left:1090px;
+	animation-delay:.3s;
+	transform:rotateY(180deg)
+}
+.heartgroup-vt .item6-gvt {
+	width:36px;
+	height:18px;
+	top:18px;
+	left:690px;
+	animation-delay:.5s
+}
+.heartgroup-vt .item7-gvt {
+	width:25px;
+	height:13px;
+	top:54px;
+	left:1020px;
+	animation-delay:1s
+}
+.view-top {
+	width:100%;
+	height:1420px;
+	position:relative;
+	
+}
+.heartgroup-vt {
+	z-index:102
+}
+.comparison_vc img,.heartgroup-vt span {
+	opacity:0;
+	-webkit-animation-name:fadeIn
+}
+#valentine,#valentine .shake {
+	height:0;
+	top:0;
+	position:absolute
+}
+#valentine {
+	display:none;
+	z-index:200;
+	width:600px;
+	left:130px;
+	left:145px\9;
+	*left:145px;
+	_left:145px
+}
+#valentine .shake {
+	width:240px;
+	z-index:120;
+	left:180px;
+	animation-name:shake;
+	animation-duration:2.5s;
+	animation-iteration-count:infinite;
+	animation-timing-function:cubic-bezier(.6,0,.3,1);
+	animation-direction:alternate;
+	transform-origin:top center
+}
+#valentine .shake .rope {
+	position:absolute;
+	width:2px;
+	left:105px;
+	top:-10px;
+	background-color:#FF2128
+}
+#valentine .shake .heart-wrap {
+	position:absolute;
+	width:235px;
+	height:225px
+}
+#valentine .heart-wrap .heart {
+	display:block;
+	position:relative;
+	width:235px;
+	height:225px
+}
+#valentine .heart-wrap .beat {
+	position:absolute;
+	top:25px;
+	left:130px;
+	animation-name:beat;
+	animation-duration:1.6s;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-out;
+	transform-origin:bottom center
+}
+#valentine .tiny {
+	position:relative;
+	width:0;
+	height:0;
+	top:0;
+	left:300px;
+	z-index:101
+}
+#valentine .close,#valentine .tiny img {
+	position:absolute
+}
+#valentine .close {
+	display:none;
+	top:260px;
+	right:-20px;
+	width:36px;
+	height:36px;
+	background:#888;
+	border-radius:50%;
+	text-align:center;
+	line-height:36px;
+	color:#FFF;
+	font-size:32px;
+	font-family:'Times New Roman';
+	cursor:pointer;
+	text-decoration:none
+}
+#valentine .close:hover {
+	background:#666
+}
+
+.mood:hover {
+	animation:mood-shake .1s 0s 3 alternate backwards
+}
+.mood2:hover {
+	animation:mood-shake .1s 0s 3 alternate backwards
+}
+
+@keyframes shake {
+	from {
+	transform:rotate(15deg)
+}
+to {
+	transform:rotate(-15deg)
+}
+}
+
+@-webkit-keyframes mood-shake {
+	0%,100% {
+	transform:translateX(0)
+}
+50% {
+	transform:translateX(-5px)
+}
+}
+
+@-o-keyframes mood-shake {
+	0%,100% {
+	transform:translateX(0)
+}
+50% {
+	transform:translateX(-5px)
+}
+}
+
+@keyframes mood-shake {
+	0%,100% {
+	transform:translateX(0)
+}
+50% {
+	transform:translateX(-5px)
+}
+}
+.topbar li:hover {
+	animation:mood-shake .1s 0s 3 alternate backwards
+}
+@keyframes shake-reverse {
+	from {
+	transform:rotate(-15deg)
+}
+to {
+	transform:rotate(15deg)
+}
+}
+
+body {
+	min-width:1200px
+}
