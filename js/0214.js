@@ -105,17 +105,10 @@ var shakes = {
     var t = 180
       , e = document.querySelector("#valentine")
       , s = e.querySelector(".tiny")
-      , a = e.querySelector(".shake")
-      , i = function() {
-        e.querySelector(".close").addEventListener("click", function() {
-            shakes.stop(),
-            e.style.display = "none"
-        })
-    };
+      , a = e.querySelector(".shake");
     shakes.start(t, s, a),
     a.querySelector(".rope").style.height = t + "px",
     a.querySelector(".heart-wrap").style.top = t - 60 + "px",
-    e.style.display = "block",
-    i()
+    e.style.display = "block"
 };
 init();
