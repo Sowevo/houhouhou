@@ -219,7 +219,8 @@
 
     Tree = function(canvas, width, height, opt) {
         this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
+        // Prefer willReadFrequently to speed up repeated getImageData calls.
+        this.ctx = canvas.getContext('2d', { willReadFrequently: true }) || canvas.getContext('2d');
         this.width = width;
         this.height = height;
         this.opt = opt || {};

@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Our Love Story</title>
         <link type="text/css" rel="stylesheet" href="css/default.css">
-        <script type="text/javascript" src="//cdn.staticfile.org/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@1.7.3/tmp/jquery.min.js"></script>
         <script type="text/javascript" src="js/jscex.js"></script>
         <script type="text/javascript" src="js/jscex-parser.js"></script>
         <script type="text/javascript" src="js/jscex-jit.js"></script>
@@ -18,7 +18,7 @@
         </script>
     </head>
     <body>
-        <audio preload="auto" loop id="audio" autoplay>
+        <audio preload="auto" loop id="audio">
             <source src="./yujianni.mp3" type="audio/mp3">
         </audio>
 		<div id="main">
@@ -115,13 +115,15 @@
             //	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             //	}
 
-            //移动端设定不能自动播放,都改为点击后播放
-            $('html').one('touchstart', function() {
-                audio.play();
-            });
+            var audio = document.getElementById('audio');
 
             (function() {
                 var canvas = $('#canvas');
+                var playAudio = function() {
+                    audio.play();
+                };
+                canvas.one('click', playAudio);
+                canvas[0].addEventListener('touchstart', playAudio, { once: true, passive: true });
 
                 if (!canvas[0].getContext) {
                     $("#error").show();
